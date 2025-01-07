@@ -1,0 +1,162 @@
+.hero{
+    height: 480px;
+    width: 100%;
+    background-color: #FEFEFE;
+    padding-top: 50px;
+  }
+  .custom-shape-divider-bottom-1733972573 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  
+  .custom-shape-divider-bottom-1733972573 svg {
+    position: relative;
+    display: block;
+    width: calc(215% + 1.3px);
+    height: 400px;
+    transform: rotateY(180deg);
+  }
+  
+  .custom-shape-divider-bottom-1733972573 .shape-fill {
+    fill: #2E2E2E;
+  }
+  .main-heading1{
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
+    font-weight: 900; /* Bold for headings */
+    margin: 10px 0; /* Space around headings */
+    color: #333;
+    font-size: 4.5rem; /* Larger font size for H1 */
+    text-align: left; /* Center-align the main heading */
+    color: #2E2E2E;
+    padding-left: 100px;
+    line-height: 4rem;
+  }
+  .main-heading2{
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
+    font-weight: 900; /* Bold for headings */
+     /* Space around headings */
+    color: #333;
+    font-size: 4.5rem; /* Larger font size for H1 */
+    text-align: left; /* Center-align the main heading */
+    color: #2E2E2E;
+    padding-left: 100px;
+    line-height: 4rem;
+  }
+  .sentence1{
+    font-family: 'Lato', sans-serif; /* Apply Playfair Display font */
+    font-weight: 400; /* Bold for headings */
+
+    font-size: 0.9rem; /* Larger font size for H1 */
+    text-align: left; /* Center-align the main heading */
+    color: #4A4A4A;
+    padding-left: 100px;
+    line-height: 1rem;
+    padding-top: 30px;
+  }
+  .sentence2{
+    font-family: 'Lato', sans-serif; /* Apply Playfair Display font */
+    font-weight: 400; /* Bold for headings */
+
+    font-size: 0.9rem; /* Larger font size for H1 */
+    text-align: left; /* Center-align the main heading */
+    color: #4A4A4A;
+    padding-left: 100px;
+    line-height: 2rem;
+  }
+  .btn {
+    background-color: #9C149A; /* Primary button color */
+    border: none; /* Removes border */
+    padding: 10px 20px; /* Combines padding for cleaner code */
+    border-radius: 50px; /* Rounded corners */
+    color: #FEFEFE; /* Button text color */
+    margin: 40px 0 0 100px; /* Top margin and left margin only */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    cursor: pointer;
+    position: relative; /* Needed for z-index to take effect */
+    z-index: 10;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #BA1EB9; /* Darker color for hover */
+    transform: scale(1.1); /* Subtle scaling effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+
+
+.illustration{
+
+    position: absolute;
+    bottom: 120px; /* Adjust this value to move the image higher relative to the wave */
+    left: 70%; /* Centers the image horizontally */
+    transform: translateX(-50%); /* Ensures proper centering */
+    width: 400px; /* Adjust width as needed */
+    z-index: 2; /* Ensures the illustration stays on top of the SVG wave */
+    
+}
+.hero {
+  height: 480px;
+  width: 100%;
+  background-color: #FEFEFE;
+  padding-top: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-heading1,
+.main-heading2,
+.sentence1,
+.sentence2,
+.btn,
+.illustration {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.main-heading1.visible,
+.main-heading2.visible,
+.sentence1.visible,
+.sentence2.visible,
+.btn.visible,
+.illustration.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.illustration {
+  position: absolute;
+  bottom: 120px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 400px;
+  z-index: 2;
+}
+
+/* Other existing styles remain unchanged */
+.hero, .main-heading1, .main-heading2, .sentence1, .sentence2, .btn, .illustration {
+  opacity: 0;
+  transform: translateY(50px); /* or other initial transform */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When the element becomes visible */
+.hero.visible, .main-heading1.visible, .main-heading2.visible, .sentence1.visible, .sentence2.visible, .btn.visible, .illustration.visible {
+  opacity: 1;
+  transform: translateY(0); /* Adjust transform as needed */
+}

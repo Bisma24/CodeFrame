@@ -1,0 +1,117 @@
+
+  
+  /* Services Section */
+  .services-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start from below */
+    transition: all 0.8s ease-out; /* Smooth transition */
+  }
+  
+  /* Visible state when in the viewport */
+  .services-section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves to its original position */
+  }
+  
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Individual Service Card */
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #FEFEFE;
+
+    padding: 20px;
+    width: 250px; /* Adjust width as per your layout */
+
+  }
+  
+  .services:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Icon Styling */
+  .services-svg {
+    width: 30px;
+    height: 30px;
+    color: #E083BD; /* Green color for icons */
+    margin-bottom: 15px;
+    transition: fill 0.3s;
+  }
+  
+ 
+  
+  /* Service Detail Text */
+  .service-detail {
+    font-size: 16px;
+    color: #FEFEFE;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .services {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  .service-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-top: 10px;
+    font-family: 'Playfair Display', sans-serif;
+  }
+  
+  /* Description Styling */
+  .service-description {
+    font-size: 13px;
+    color: #2E2E2E;
+    margin-top: 8px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
+/* Styling for the service heading */
+.service-heading {
+  font-size: 2rem; /* Larger font size for emphasis */
+  font-weight: 700; /* Bold text for prominence */
+  text-align: center; /* Center align the text */
+  color: #2E2E2E; /* Dark gray color for a clean look */
+  margin-bottom: 20px; /* Space below the heading */
+  text-transform: uppercase; /* Uppercase letters for a modern style */
+  letter-spacing: 2px; /* Slight spacing between letters */
+  position: relative; /* For decorative elements like underline */
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.service-heading::after {
+  content: '';
+  display: block;
+  width: 60px; /* Underline width */
+  height: 4px; /* Underline thickness */
+  background-color: #E083BD; /* Accent color */
+  margin: 10px auto 0; /* Center underline with spacing */
+}
+.service-description {
+  font-size: 0.8rem; /* Slightly smaller than the heading */
+  text-align: center; /* Center-align for consistency */
+  color: #555555; /* A softer gray for readability */
+  margin-bottom: 30px; /* Adds space before the tabs */
+  line-height: 1.6; /* Improves readability */
+  font-family: 'Lato', sans-serif;
+}

@@ -1,0 +1,122 @@
+.portfolio-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  border: 1px solid #9C149A;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  color: #9C149A;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  
+}
+
+.tab.active {
+  background-color: #9C149A;
+  color: white;
+}
+
+.tab:hover {
+  background-color: #9C149A;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-item {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+
+  /* Add smooth transition for the hover effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img:hover {
+  /* Scale the image to zoom in */
+  transform: scale(1.1);
+}
+
+
+.portfolio-item h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.portfolio-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+.project-heading {
+  font-size: 2rem; /* Larger font size for emphasis */
+  font-weight: 700; /* Bold text for prominence */
+  text-align: center; /* Center align the text */
+  color: #2E2E2E; /* Dark gray color for a clean look */
+  margin-bottom: 20px; /* Space below the heading */
+  text-transform: uppercase; /* Uppercase letters for a modern style */
+  letter-spacing: 2px; /* Slight spacing between letters */
+  position: relative; /* For decorative elements like underline */
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.project-heading::after {
+  content: '';
+  display: block;
+  width: 60px; /* Underline width */
+  height: 4px; /* Underline thickness */
+  background-color: #E083BD; /* Accent color */
+  margin: 10px auto 0; /* Center underline with spacing */
+}
+.project-description {
+  font-size: 0.8rem; /* Slightly smaller than the heading */
+  text-align: center; /* Center-align for consistency */
+  color: #555555; /* A softer gray for readability */
+  margin-bottom: 30px; /* Adds space before the tabs */
+  line-height: 1.6; /* Improves readability */
+  font-family: 'Lato', sans-serif;
+}
+/* Initial state for the animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px); /* Slight downward offset */
+  transition: all 0.6s ease-in-out;
+}
+
+/* Active state when in view */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,83 @@
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #9C149A; /* Light text for visibility */
+    padding: 20px 0; /* Space above and below the footer content */
+    text-align: center; /* Center-align the text and icons */
+
+  }
+ /* Footer styles */
+/* Footer styles */
+#animated-footer {
+  position: fixed; /* Stick to the bottom of the screen */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Dark background */
+  color: #9C149A;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(0); /* Default position */
+  opacity: 1; /* Default visibility */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Footer hides when scrolling */
+#animated-footer.hidden {
+  transform: translateY(100%); /* Slide out of view */
+  opacity: 0; /* Fade out */
+}
+
+/* Footer shows when scrolling up */
+#animated-footer.visible {
+  transform: translateY(0); /* Slide into view */
+  opacity: 1; /* Fade in */
+}
+
+
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between elements */
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between social icons */
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEFEFE; /* Subtle background for icons */
+    border-radius: 50%; /* Circular icons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icon svg {
+    fill: #fff; /* Icon color */
+    width: 20px;
+    height: 20px;
+  }
+
+  
+  .social-icon:hover {
+    background-color: #E083BD; /* Gold-like color for hover effect */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color: #bbb; /* Softer color for footer text */
+  }
+  
+  .footer-text:hover {
+    color: #fff; /* Brighten on hover for subtle effect */
+  }
+  

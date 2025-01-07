@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logo.css">
+    <link rel="stylesheet" href="shape-divider.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="hero-section.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="service.css">
+    
+  
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <img class="website-logo" style="height: 30px; width: 60px;" src="images/logo.png">
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#">About</a>
+                <a href="#service">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                
+            </div>
+            
+        </div>
+    </header>
+
+    <section id="home">
+    <div style="position: relative; min-height: 50vh;" class="hero">
+        <div class="main-heading1">Where ideas</div>
+        <div class="main-heading2">meet innovation</div>
+        <div class="sentence1">Expert graphic design and front-end development to transform your concepts </div>
+        <div class="sentence2">into captivating realities.</div>
+        <button class="btn" id="getStartedBtn">Get Started</button>
+
+        <div class="custom-shape-divider-bottom-1733972573">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+           
+        </div>
+        <img class="illustration" src="images/undraw_learning_sketching_nd4f-removebg-preview.png">
+    </div>
+</section>
+<script>
+  document.getElementById('getStartedBtn').addEventListener('click', function () {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+<script>
+  // Function to detect when an element is in the viewport
+  function checkVisibility() {
+      const elements = document.querySelectorAll('.hero, .main-heading1, .main-heading2, .sentence1, .sentence2, .btn, .illustration');
+      
+      elements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          
+          // If the element is in the viewport, add the 'visible' class to trigger animation
+          if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+              // Check if the element doesn't already have the class to avoid unnecessary re-adding
+              if (!element.classList.contains('visible')) {
+                  element.classList.add('visible');
+              }
+          } else {
+              // Remove 'visible' class when the element is out of the viewport
+              if (element.classList.contains('visible')) {
+                  element.classList.remove('visible');
+              }
+          }
+      });
+  }
+
+  // Event listener to check visibility on scroll
+  window.addEventListener('scroll', checkVisibility);
+
+  // Initial check when the page loads
+  document.addEventListener('DOMContentLoaded', checkVisibility);
+</script>
+
+
+
+
+
+    <section id="service" class="services-section">
+      <div class="service-heading">Our Services</div>
+      <p class="service-description">
+        We offer a wide range of professional services designed to bring your vision to life. From captivating designs to cutting-edge development, we ensure every project is tailored to perfection.
+      </p>
+      <div class="service-container">
+        
+      <div class="services">
+        <svg class="services-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 21q-1.125 0-2.225-.55T2 19q.65 0 1.325-.513T4 17q0-1.25.875-2.125T7 14t2.125.875T10 17q0 1.65-1.175 2.825T6 21m5.75-6L9 12.25l8.95-8.95q.275-.275.688-.288t.712.288l1.35 1.35q.3.3.3.7t-.3.7z"/></svg>
+        <div class="service-title">
+          Graphic Designing
+        </div>
+        <div class="service-description">
+          Transforming ideas into stunning visuals. Logos, banners, posters, and more to elevate your brand identity.
+
+        </div>
+
+      </div>
+
+      <div class="services">
+        <svg class="services-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M15.275 12.475L11.525 8.7L14.3 5.95l-.725-.725L8.1 10.7L6.7 9.3l5.45-5.475q.6-.6 1.413-.6t1.412.6l.725.725l1.25-1.25q.3-.3.713-.3t.712.3L20.7 5.625q.3.3.3.713t-.3.712zM6.75 21H3v-3.75l7.1-7.125l3.775 3.75z"/></svg>
+        <div class="service-title">
+          UI/UX Designing
+        </div>
+        <div class=" service-description">
+          Creating intuitive and user-friendly interfaces that enhance user experience and engagement.
+
+        </div>
+
+      </div>
+
+      <div class="services">
+        <svg class="services-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12q0-.175-.012-.363t-.013-.312q-.125.725-.675 1.2T18 13h-2q-.825 0-1.412-.587T14 11v-1h-4V8q0-.825.588-1.412T12 6h1q0-.575.313-1.012t.762-.713q-.5-.125-1.012-.2T12 4Q8.65 4 6.325 6.325T4 12h5q1.65 0 2.825 1.175T13 16v1h-3v2.75q.5.125.988.188T12 20"/></svg>
+        <div class="service-title">
+          Web Designing
+        </div>
+        <div class="service-description">
+          Crafting visually appealing and responsive websites tailored to meet your needs.
+        </div>
+        
+
+      </div>
+
+      <div class="services">
+        <svg class="services-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m23 12l-5.45 6.5L16 17.21L20.39 12L16 6.79l1.55-1.29zM8 6.79L6.45 5.5L1 12l5.45 6.5L8 17.21L3.61 12zm.45 14.61l1.93.52L15.55 2.6l-1.93-.52z"/></svg>
+        <div class=" service-title">
+          Web Development
+        </div>
+        <div class="service-description">
+          Building robust, scalable, and high-performing websites with cutting-edge technologies.
+        </div>
+
+      </div>
+    </div>
+
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".services-section"); // Select only the services section
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Add animation class
+        } else {
+          entry.target.classList.remove("visible"); // Remove class when scrolled out
+        }
+      });
+    },
+    { threshold: 0.1 } // Trigger when 10% of the section is visible
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});
+
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="portfolio" class="portfolio-container">
+      <div class="project-heading">Our Projects</div>
+      <p class="project-description">
+        Explore our diverse portfolio showcasing creativity, innovation, and dedication. Each project reflects our commitment to excellence and client satisfaction.
+      </p>
+      <div class="tabs">
+        <button class="tab active" data-target="all">All</button>
+        <button class="tab" data-target="graphic-designing">Graphic Designing</button>
+        <button class="tab" data-target="ui-ux">UI/UX</button>
+        <button class="tab" data-target="web-designing">Web Designing</button>
+        <button class="tab" data-target="front-end">Front-End Development</button>
+      </div>
+  
+      <!-- Tab Content -->
+      <div id="all" class="tab-content active">
+        <div class="portfolio-grid">
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/images1.jpeg" alt="Graphic Designing">
+            <h3>Graphic Designing</h3>
+            <p>Creating stunning visuals for branding.</p>
+          </div>
+          <div class="portfolio-item">
+            <img src="images/images2.jpeg" alt="UI/UX">
+            <h3>UI/UX</h3>
+            <p>Enhancing user experience with intuitive designs.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/images3.jpeg" alt="Web Designing">
+            <h3>Web Designing</h3>
+            <p>Crafting responsive and modern websites.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/images1.jpeg" alt="Front-End Development">
+            <h3>Front-End Development</h3>
+            <p>Building interactive and robust interfaces.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div id="graphic-designing" class="tab-content">
+        <div class="portfolio-grid">
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/logo.png" alt="Graphic Designing">
+            <h3>Graphic Designing</h3>
+            <p>Creating stunning visuals for branding.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/logo.png" alt="Graphic Designing">
+            <h3>Graphic Designing</h3>
+            <p>Creating stunning visuals for branding.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/logo.png" alt="Graphic Designing">
+            <h3>Graphic Designing</h3>
+            <p>Creating stunning visuals for branding.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div id="ui-ux" class="tab-content">
+        <div class="portfolio-grid">
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Group 7.png" alt="UI/UX">
+            <h3>UI/UX</h3>
+            <p>Enhancing user experience with intuitive designs.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Group 7.png" alt="UI/UX">
+            <h3>UI/UX</h3>
+            <p>Enhancing user experience with intuitive designs.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Group 7.png" alt="UI/UX">
+            <h3>UI/UX</h3>
+            <p>Enhancing user experience with intuitive designs.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div id="web-designing" class="tab-content">
+        <div class="portfolio-grid">
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Group 25.png" alt="Web Designing">
+            <h3>Web Designing</h3>
+            <p>Crafting responsive and modern websites.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Group 25.png" alt="Web Designing">
+            <h3>Web Designing</h3>
+            <p>Crafting responsive and modern websites.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Group 25.png" alt="Web Designing">
+            <h3>Web Designing</h3>
+            <p>Crafting responsive and modern websites.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div id="front-end" class="tab-content">
+        <div class="portfolio-grid">
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Frame 3 (1).png" alt="Front-End Development">
+            <h3>Front-End Development</h3>
+            <p>Building interactive and robust interfaces.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Frame 3 (1).png" alt="Front-End Development">
+            <h3>Front-End Development</h3>
+            <p>Building interactive and robust interfaces.</p>
+          </div>
+          <div class="portfolio-item animate-on-scroll">
+            <img src="images/Frame 3 (1).png" alt="Front-End Development">
+            <h3>Front-End Development</h3>
+            <p>Building interactive and robust interfaces.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      // Tab switching functionality
+      document.querySelectorAll(".tab").forEach(tab => {
+        tab.addEventListener("click", () => {
+          // Remove 'active' from all tabs and tab-content
+          document.querySelectorAll(".tab, .tab-content").forEach(el => el.classList.remove("active"));
+  
+          // Add 'active' to the clicked tab and corresponding content
+          tab.classList.add("active");
+          document.getElementById(tab.getAttribute("data-target")).classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      // Initialize Intersection Observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            // Optionally, remove the visible class when the element goes out of view
+            entry.target.classList.remove('visible');
+          }
+        });
+      });
+    
+      // Target all elements with the class 'animate-on-scroll'
+      document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+    </script>
+    
+
+      
+    <section>
+      <div id="contact" class="contact-section">
+          <div class="left-side">
+              <form action="https://formspree.io/f/xkgnlzoy" method="POST" class="contact-form">
+                  <div class="form-group">
+                      <p class="inputfield">Your Name</p>
+                      <input class="namefield" type="text" name="name" placeholder="Full Name" required>
+                  </div>
+  
+                  <div class="form-group">
+                      <p class="inputfield">Your Email</p>
+                      <input class="emailfield" type="email" name="email" placeholder="Email Address" required>
+                  </div>
+  
+                  <div class="form-group">
+                      <p class="inputfield">Subject</p>
+                      <input class="messagefield" type="text" name="subject" placeholder="Subject" required>
+                  </div>
+  
+                  <div class="form-group">
+                      <p class="inputfield">Your Message</p>
+                      <textarea class="inputfield" name="message" placeholder="Message" required></textarea>
+                  </div>
+  
+                  <button type="submit">Send Message</button>
+              </form>
+          </div>
+  
+          <div class="right-side">
+              <div class="contactus">Contact Us</div>
+              <div class="contact-heading">Get in Touch</div>
+              <div class="para">
+                  Let's connect! Whether you have a project to discuss or need more information, we’re here to answer your queries.
+              </div>
+              
+              <div class="contact-info">
+                  <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4.616 19q-.691 0-1.153-.462T3 17.384V6.616q0-.691.463-1.153T4.615 5h14.77q.69 0 1.152.463T21 6.616v10.769q0 .69-.463 1.153T19.385 19zM12 11.96q.125 0 .234-.038q.108-.038.214-.093l7.229-4.733q.142-.086.185-.235t-.016-.297q-.038-.193-.252-.28q-.213-.086-.413.035L12 11L4.82 6.32q-.2-.122-.404-.052t-.262.276q-.058.154-.015.313t.184.24l7.229 4.732q.106.055.214.093q.109.037.234.037"/></svg>
+                  </span>
+                  <div>
+                      <div class="info-title">Email Us</div>
+                      <div class="info-details">info@example.com</div>
+                  </div>
+              </div>
+              <div class="contact-info">
+                  <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m11.8 19.987l.15-4.195L15 12.8h1.95v1.85l2.245.35q.271-.7.431-1.45t.16-1.55q0-2.225-1.093-4.043T15.8 5.089V8h-3v3h-2v3H8.775L6.8 11h-1v1l-1.736 1.975q.65 2.6 2.793 4.306t4.943 1.706m4-5.987h-3v-2h3zm0-6h2.025l-1.02 3h-2.03zm-3.997 13q-1.867 0-3.51-.708q-1.643-.709-2.859-1.924t-1.925-2.856t-.709-3.509t.709-3.51q.708-1.643 1.923-2.859t2.856-1.925T11.797 3t3.51.709q1.643.708 2.859 1.922t1.925 2.857t.709 3.509t-.708 3.51t-1.923 2.859t-2.857 1.925t-3.509.709"/></svg>
+                  </span>
+                  <div>
+                      <div class="info-title">Website</div>
+                      <div class="info-details">www.example.com</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const contactSection = document.querySelector('.contact-section');
+
+    const checkVisibility = () => {
+        const sectionPosition = contactSection.getBoundingClientRect();
+        const screenHeight = window.innerHeight;
+
+        // Check if the section is within the viewport
+        if (sectionPosition.top < screenHeight && sectionPosition.bottom > 0) {
+            contactSection.classList.add('visible');
+        } else {
+            contactSection.classList.remove('visible');
+        }
+    };
+
+    // Trigger animation on scroll and initial load
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Ensure visibility on initial load
+});
+
+  
+</script>
+
+    <footer id="animated-footer">
+      <div class="footer-container">
+        <div class="social-links"> <!-- Corrected class -->
+          <div class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M13 10a3 3 0 1 1-6 0q.001-.257.049-.5H6v3.997c0 .278.225.503.503.503h6.995a.503.503 0 0 0 .502-.503V9.5h-1.049q.048.243.049.5m-3 2a2 2 0 1 0-.001-4.001A2 2 0 0 0 10 12m2.4-4.1h1.199a.3.3 0 0 0 .301-.3V6.401a.3.3 0 0 0-.301-.301H12.4a.3.3 0 0 0-.301.301V7.6c.001.165.136.3.301.3M10 .4A9.6 9.6 0 0 0 .4 10a9.6 9.6 0 0 0 9.6 9.6a9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 10 .4m5 13.489C15 14.5 14.5 15 13.889 15H6.111C5.5 15 5 14.5 5 13.889V6.111C5 5.5 5.5 5 6.111 5h7.778C14.5 5 15 5.5 15 6.111z"/></svg>
+          </div>
+          <div class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4m2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443z"/></svg>
+          </div>
+          <div class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4M7.65 13.979H5.706V7.723H7.65zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973m8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699z"/></svg>
+          </div>
+        </div>
+        <div class="footer-text">© 2024 Elegant Jewelry Creations. All rights reserved.</div>
+      </div>
+    </footer>
+    <script>
+    let lastScrollY = window.scrollY;
+const footer = document.getElementById("animated-footer");
+let isScrolling; // Track if the user is scrolling
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  // Determine scrolling direction
+  if (currentScrollY < lastScrollY) {
+    // Scrolling up
+    footer.classList.add("visible");
+    footer.classList.remove("hidden");
+  } else {
+    // Scrolling down
+    footer.classList.add("hidden");
+    footer.classList.remove("visible");
+  }
+
+  lastScrollY = currentScrollY;
+
+  // Clear the timeout if still scrolling
+  clearTimeout(isScrolling);
+
+  // Set a timeout to always show the footer after scrolling stops
+  isScrolling = setTimeout(() => {
+    footer.classList.add("visible");
+    footer.classList.remove("hidden");
+  }, 500); // Adjust time as needed
+});
+
+</script>
+        
+</body>
+</html>
+

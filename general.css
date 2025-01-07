@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    background-color: #FEFEFE; /* Black background with 50% transparency */
+    padding-bottom: 15px;
+}
+.nav-links {
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align items vertically (if necessary) */
+    margin-top: 10px; /* Add spacing between links and logo if needed */
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #9C149A; /* Light blue color */
+    font-size: 16px;
+    margin: 0 10px; /* Add horizontal spacing between links */
+    transition: color 0.3s ease; /* Smooth hover effect */
+    font-size: 16px; /* Font size */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    font-weight: 200; /* Bold weight */
+    padding: 10px 15px;
+    margin-right: 90px;
+  }
+  
+  .nav-links a:hover {
+    background-color: #E083BD; /* Light purple background */
+    color: #ffffff; /* Change text color to white */
+    border-radius: 5px; /* Optional: Rounded hover effect */
+  }
+
+
