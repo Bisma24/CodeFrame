@@ -36,11 +36,16 @@
 }
 
 .tab-content {
-  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  height: 0;
+  overflow: hidden;
 }
 
 .tab-content.active {
   display: block;
+  opacity: 1;
+  height: auto;
 }
 
 .portfolio-grid {
@@ -119,4 +124,43 @@
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tab {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 0.3rem 0.2rem;
+    font-size: 0.85rem;
+  }
+
+  .portfolio-item {
+    padding: 0.7rem;
+  }
+
+  .project-heading {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.75rem;
+  }
+}
+.tabs {
+  position: relative;
+}
+
+.tab.active::after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 50%;
+  background: #E083BD;
+  margin-top: 8px;
+  border-radius: 2px;
 }
