@@ -52,55 +52,55 @@
   </script>
 
     <section id="home">
-    <div style="position: relative; min-height: 50vh;" class="hero">
-        <div class="main-heading1">Where ideas</div>
-        <div class="main-heading2">meet innovation</div>
-        <div class="sentence1">Expert graphic design and front-end development to transform your concepts </div>
-        <div class="sentence2">into captivating realities.</div>
-        <button class="btn" id="getStartedBtn">Get Started</button>
+<div style="position: relative; min-height: 50vh;" class="hero">
+    <div class="main-heading1">Where ideas</div>
+    <div class="main-heading2">meet innovation</div>
+    <div class="sentence1">Expert graphic design and front-end development to transform your concepts </div>
+    <div class="sentence2">into captivating realities.</div>
+    <button class="btn" id="getStartedBtn">Get Started</button>
 
-        <div class="custom-shape-divider-bottom-1733972573">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-           
-        </div>
-        <img class="illustration" src="images/undraw_learning_sketching_nd4f-removebg-preview.png">
+    <div class="custom-shape-divider-bottom-1733972573">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
+       
     </div>
+    <img class="illustration" src="images/undraw_learning_sketching_nd4f-removebg-preview.png">
+</div>
 </section>
 <script>
-  document.getElementById('getStartedBtn').addEventListener('click', function () {
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-  });
+document.getElementById('getStartedBtn').addEventListener('click', function () {
+document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
 </script>
 <script>
-  // Function to detect when an element is in the viewport
-  function checkVisibility() {
-      const elements = document.querySelectorAll('.hero, .main-heading1, .main-heading2, .sentence1, .sentence2, .btn, .illustration');
+// Function to detect when an element is in the viewport
+function checkVisibility() {
+  const elements = document.querySelectorAll('.hero, .main-heading1, .main-heading2, .sentence1, .sentence2, .btn, .illustration');
+  
+  elements.forEach(element => {
+      const rect = element.getBoundingClientRect();
       
-      elements.forEach(element => {
-          const rect = element.getBoundingClientRect();
-          
-          // If the element is in the viewport, add the 'visible' class to trigger animation
-          if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-              // Check if the element doesn't already have the class to avoid unnecessary re-adding
-              if (!element.classList.contains('visible')) {
-                  element.classList.add('visible');
-              }
-          } else {
-              // Remove 'visible' class when the element is out of the viewport
-              if (element.classList.contains('visible')) {
-                  element.classList.remove('visible');
-              }
+      // If the element is in the viewport, add the 'visible' class to trigger animation
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          // Check if the element doesn't already have the class to avoid unnecessary re-adding
+          if (!element.classList.contains('visible')) {
+              element.classList.add('visible');
           }
-      });
-  }
+      } else {
+          // Remove 'visible' class when the element is out of the viewport
+          if (element.classList.contains('visible')) {
+              element.classList.remove('visible');
+          }
+      }
+  });
+}
 
-  // Event listener to check visibility on scroll
-  window.addEventListener('scroll', checkVisibility);
+// Event listener to check visibility on scroll
+window.addEventListener('scroll', checkVisibility);
 
-  // Initial check when the page loads
-  document.addEventListener('DOMContentLoaded', checkVisibility);
+// Initial check when the page loads
+document.addEventListener('DOMContentLoaded', checkVisibility);
 </script>
 
 <section class="about-section">
