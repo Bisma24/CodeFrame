@@ -338,6 +338,20 @@
             // Optionally, remove the visible class when the element goes out of view
             entry.target.classList.remove('visible');
           }
+          document.querySelectorAll(".tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".tab, .tab-content").forEach(el => el.classList.remove("active"));
+
+    tab.classList.add("active");
+    const targetContent = document.getElementById(tab.getAttribute("data-target"));
+
+    // Optional: short timeout to allow transition
+    setTimeout(() => {
+      targetContent.classList.add("active");
+    }, 50);
+  });
+});
+
         });
       });
     
