@@ -1,9 +1,25 @@
 .container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-.website-logo{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Default logo position for desktop */
+.website-logo {
   padding-left: 110px;
+  height: 30px;
+  width: 60px;
+}
+
+/* Logo adjustments for mobile screens */
+@media screen and (max-width: 768px) {
+  .container {
+      justify-content: center; /* center the logo horizontally */
+  }
+
+  .website-logo {
+      padding-left: 0; /* remove left padding on mobile */
+      height: 40px;     /* increase height */
+      width: 80px;      /* increase width */
+  }
 }
