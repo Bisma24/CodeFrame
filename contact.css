@@ -183,3 +183,57 @@
     outline: none;
     box-shadow: 0 0 5px #E083BD; /* Optional visual effect */
 }
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+      padding: 30px 20px;
+      margin: 20px 10px;
+    }
+  
+    .left-side, .right-side {
+      width: 100%;
+      padding: 0;
+      margin: 20px 0;
+    }
+  
+    .right-side {
+      padding-left: 0;
+    }
+  
+    .namefield, .emailfield, .messagefield,
+    .left-side input, .left-side textarea {
+      width: 100%;
+    }
+  
+    .contact-heading {
+      font-size: 24px;
+    }
+  
+    .para {
+      font-size: 14px;
+    }
+  
+    .contact-info {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .contact-info .icon {
+      font-size: 18px;
+    }
+  
+    .info-title {
+      font-size: 14px;
+    }
+  
+    .info-details {
+      font-size: 13px;
+    }
+  
+    .left-side button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
