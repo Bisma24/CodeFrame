@@ -1,40 +1,90 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-    background-color: #FEFEFE; /* Black background with 50% transparency */
-    padding-bottom: 15px;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  background-color: #FEFEFE;
+  padding-bottom: 15px;
 }
+
 .nav-links {
-    display: flex; /* Make it a flex container */
-    justify-content: center; /* Center the links horizontally */
-    align-items: center; /* Align items vertically (if necessary) */
-    margin-top: 10px; /* Add spacing between links and logo if needed */
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Styling for navbar links */
+.nav-links a {
+  text-decoration: none;
+  color: #9C149A;
+  font-size: 16px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  padding: 10px 15px;
+  margin-right: 90px;
+}
+
+.nav-links a:hover {
+  background-color: #E083BD;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
   }
-  
+
+  .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 15px;
+  }
+
   .nav-links a {
-    text-decoration: none;
-    color: #9C149A; /* Light blue color */
-    font-size: 16px;
-    margin: 0 10px; /* Add horizontal spacing between links */
-    transition: color 0.3s ease; /* Smooth hover effect */
-    font-size: 16px; /* Font size */
-    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
-    font-weight: 200; /* Bold weight */
-    padding: 10px 15px;
-    margin-right: 90px;
-  }
-  
-  .nav-links a:hover {
-    background-color: #E083BD; /* Light purple background */
-    color: #ffffff; /* Change text color to white */
-    border-radius: 5px; /* Optional: Rounded hover effect */
+      margin: 10px 0;
+      margin-right: 0;
   }
 
+  .nav-links.active {
+      display: flex;
+  }
 
+  .navbar .container {
+      width: 100%;
+      text-align: center;
+  }
+
+  /* Mobile hamburger menu */
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      font-size: 30px;
+  }
+}
+
+/* Show hamburger icon on mobile */
+@media screen and (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+}
+
+/* If you want to hide the hamburger menu in desktop views */
+@media screen and (min-width: 769px) {
+  .hamburger {
+      display: none;
+  }
+}
